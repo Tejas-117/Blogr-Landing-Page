@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://github.com/Tejas-117/Blogr-Landing-Page)
+- [Live Site URL](https://tejas-117.github.io/Blogr-Landing-Page/)
 
 ## My process
 
@@ -48,5 +48,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Tejas](https://www.your-site.com)
-- Frontend Mentor - [@Tejas-117](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Tejas](https://github.com/Tejas-117/)
+- Frontend Mentor - [@Tejas-117](https://www.frontendmentor.io/profile/Tejas-117)
