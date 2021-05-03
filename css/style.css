@@ -1,0 +1,588 @@
+:root{
+    /* ## Colors */
+/* ### Primary */
+   --LightRed: hsl(356, 100%, 66%); /*(CTA text)*/
+   --VeryLightRed: hsl(355, 100%, 74%);/*(CTA hover background)*/
+   --VeryDarkBlue: hsl(208, 49%, 24%); /*(headings)*/
+
+/* ### Neutral */
+   --White: hsl(0, 0%, 100%);/*(text)*/
+   --GrayishBlue: hsl(240, 2%, 79%);/*(footer text)*/
+   --VeryDarkGrayishBlue: hsl(207, 13%, 34%);/*(body copy)*/
+   --VeryDarkBlackBlue : hsl(240, 10%, 16%);/*(footer background)*/
+
+/* ### Gradient */
+/* Background gradient - Intro/CTA mobile nav: */
+   /* --VeryLightRed: hsl(13, 100%, 72%);
+   --LightRed: hsl(353, 100%, 62%); */
+
+/* Background gradient - body: */
+   /* --VeryDarkGrayBlue: hsl(237, 17%, 21%);
+   --VeryDarkDesaturatedBlue: hsl(237, 23%, 32%); */
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html{
+   font-size: 16px;
+}
+body{
+   font-family: 'Ubuntu', sans-serif;
+}
+body::-webkit-scrollbar {
+   display: none;
+ }
+
+.top-section{
+   color: var(--White);
+   width: 100%;
+   padding: 2% 0% 2% 5%;
+   border-bottom-left-radius: 90px;
+   background: url(../images/bg-pattern-intro.svg), linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 70%);
+   background-repeat: no-repeat;
+   background-size: 250%;
+   background-position: 30% center;
+}
+
+/* 'top-section' styling for desktops */
+.sub-items{
+   display: none;
+}
+.navbar{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 2%;
+}
+.link-btn-wrap{
+   display: inherit;
+}
+.navbar-links{
+   margin-right: 400px;   
+   position: relative;
+   margin-top: 1%;
+}
+.navbar-links .main-ul{
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+}
+.navbar-links .main-ul li{
+   display: block;
+   margin: 0 20px;
+}
+.navbar-links a{
+   text-decoration: none;
+   color: var(--White);
+   font-weight: 500;
+   font-size: 1.2rem;
+}  
+.navbar-links img{
+   margin-left: 3px;
+}
+.navbar-links a:hover{
+   text-decoration: underline;
+}
+.navbar-links a:hover img{
+   transform: rotateX(180deg);
+}
+
+.sub-items{/*sub-list*/
+   background: var(--White);
+   color: var(--VeryDarkBlue);
+   padding: 10px 15px;
+   border-radius: 8px;
+   box-shadow: -4px 6px 9px 0px rgba(0,0,0,0.34); 
+   position: absolute; 
+   top: 100%;
+}
+.sub-items .sub-ul{
+   text-align: left;
+   height: 100%;
+}
+.sub-items .sub-ul li{
+   width: 110px;
+   margin: 7px 0;
+}
+.sub-items .sub-ul li a{
+   color: var(--VeryDarkBlackBlue);
+   font-weight: 400;
+}
+.sub-items .sub-ul li a:hover{
+   text-decoration: none;
+   font-weight: 700;
+}
+.product-items{
+   left: 0%;
+}
+.company-items{
+   left: 30%;
+}
+.connect-items{
+   left: 70%;
+}
+.show{
+   display: block !important;
+}
+.btn{
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-family: inherit;
+   margin: 0 10px;   
+   font-weight: 700;
+   font-size: 1.2rem;
+   color: white;
+}
+.login{
+   background-color: transparent;
+}
+.btn-2{
+   background-color: var(--White);
+   color: var(--LightRed);
+   width: 140px;
+   height: 45px;
+   border-radius: 20px;
+}
+.lm{
+   background-color: transparent;
+   width: 140px;
+   height: 45px;
+   border: 2px solid var(--White);
+   border-radius: 20px;
+}
+.login:hover{
+   text-decoration: underline;
+}
+.btn-2:hover{
+   color: white;
+   background-color: var(--VeryLightRed);
+}
+.lm:hover{
+   background-color: white;
+   color: var(--LightRed);
+}
+.info{
+   display: block;
+   text-align: center;
+   margin: 10% 0;
+}
+.heading{
+   font-size: 3rem;
+   font-weight: 500;
+}
+.description{
+   font-family: 'Overpass', sans-serif;
+   font-weight: 300;
+   margin: 2% 0 3%;
+}
+.hamburger-img, .close-img, .nav-mobile-line{
+   display: none;
+}
+
+/* 'top-section' for mobiles/tablets */
+@media only screen and (max-width: 900px){
+   body{
+      text-align: center;
+   }
+   .link-btn-wrap{
+      display: none;
+   }
+   .top-section{
+      position: relative;
+      padding-top: 7%;
+   }
+   .navbar{
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center;
+   }
+   .navbar-links{
+      margin-right: 0;
+   }
+   .link-btn-wrap{
+      flex-direction: column;
+      background-color: var(--White);
+      width: 90%;
+      margin: 5% 0;
+      border-radius: 10px;
+      position: absolute;
+      top: 15%;
+   }
+   .navbar-links .main-ul{
+      flex-direction: column;
+   }
+   .navbar-links .main-ul li{
+      margin: 20px 0;
+   }
+   .navbar-links a{
+      color: var(--VeryDarkBlue);
+      margin: 0 auto;
+      font-size: 1.1rem;
+      font-weight: 500;
+   }
+   .navbar-links a:hover, a:focus{
+      color: var(--VeryDarkGrayishBlue);
+   }
+   .toggle-button{
+      display: block;
+      position: absolute;
+      top: 40px;
+      right: 30px;
+   }
+   .hamburger-img{
+      display: block;
+   }
+   .nav-mobile-line{
+      display: block;
+      border-top: 1px solid var(--GrayishBlue);
+      width: 90%;
+      margin: 0 auto;
+   }
+   .sub-items{
+      position: static;
+      background-color: hsla(0, 0%, 85%, 0.411);
+      margin: 1rem;
+      box-shadow: none;
+   }
+   .sub-items .sub-ul li{
+      width: 100%;
+      text-align: center;
+   }
+   .sub-items .sub-ul li a{
+      color: var(--VeryDarkGrayishBlue);
+   }
+   .btn{
+      font-size: 1rem;
+      font-weight: 500;
+      width: 110px;
+      height: 40px;
+   }
+   .login{
+      color: var(--VeryDarkBlue);
+      display: block;
+      margin: 30px auto;
+   }
+   .signup{
+      margin-bottom:12px;
+      background: linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
+      color: var(--White);
+   }
+   .signup:hover{
+      background: transparent;
+      color: var(--LightRed);
+      border: 2px solid hsl(353, 100%, 62%);
+   }
+   .active{
+      display: flex;
+   }
+   .info{
+      margin: 10% 7%;
+   }
+   .heading{
+      font-size: 2.3rem;
+   }
+   .description{
+      font-size: 1rem;
+      margin: 8% 0;
+   }
+   .info>button{
+      margin-top: 5%;
+   }
+}
+
+/* for mobiles */
+section{
+   font-family: 'Overpass', sans-serif;
+}
+.second-section{
+   margin: 20% 0;
+}
+.editor-img{
+   max-width: 100%;
+}
+.second-section h1, .second-section h2{
+   color: var(--VeryDarkBlue);
+   font-size: 2rem;
+   margin-bottom: 9%;
+}
+.first-div, .second-div{
+   margin: 20% 5%;
+}
+.second-section div p{
+   color: var(--VeryDarkGrayishBlue);
+   line-height: 1.6;
+   font-size: 1.3rem;
+}
+
+.third-section{
+   display: block;
+   width: 100%;
+   color: var(--White);
+   background: url(../images/bg-pattern-circles.svg),linear-gradient(180deg, rgba(44,45,63,1) 1%, rgba(63,65,100,1) 82%);
+   background-size: 150%, 100%;
+   background-repeat: no-repeat;
+   background-position: 50% -160%, center;
+   border-top-right-radius: 90px;
+   border-bottom-left-radius: 90px;
+   position: relative;
+   margin-top: 350px;
+   padding: 52% 2% 17%;;
+}
+.phones{
+   width: 95%;
+   position: absolute;
+   top: -30%;
+   left: 0%;
+}
+.content{
+   margin: 1% 9%;
+   position: relative;
+   z-index: 100;
+}
+.content h1{
+   font-size: 2.5rem;
+   margin-bottom: 40px;
+}
+.content p{
+   font-size: 1.2rem;
+   font-weight: 300;
+   line-height: 1.8;
+}
+
+.fourth-section{
+   margin: 35% 3%;
+}
+.laptop{
+   width: 100%;
+}
+.fourth-section h1{
+   color: var(--VeryDarkBlue);
+   font-size: 2rem;
+}
+.one , .two{
+   margin: 80px 0;
+}
+.fourth-section p{
+   margin: 9% 0;
+   color: var(--VeryDarkGrayishBlue);
+   line-height: 1.6;
+   font-size: 1.3rem;
+}
+
+footer{
+   background-color: var(--VeryDarkBlackBlue);
+   color: var(--White);
+   padding: 15% 0;
+}
+footer div{
+   margin: 15% 0;
+}
+footer ul li{
+   list-style: none;
+   margin: 10px 0;
+}
+.footer a{
+   font-size: 1.2rem;
+   color: var(--GrayishBlue);
+   text-decoration: none;
+   display: block;
+   margin: 20px 0;
+}
+.footer a:hover{
+   text-decoration: underline;
+}
+
+/* for desktops */
+@media only screen and (min-width: 900px){
+  .second-section{
+     display: flex;
+     flex-direction: row-reverse;
+     position: relative;
+     margin: 4% 0  4% 4%;
+  } 
+  .editor-img{
+     width: 45%;
+     height: 45%;
+   position: relative;
+    top: 100px;
+    left: 150px;
+  }
+  .divs-wrap{
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     margin: 8% 0;
+     padding: 4% 1%;
+  }
+  .first-div, .second-div{
+     margin: 0% ;
+     margin-bottom: 7%;
+  }
+  .second-section h2{
+     margin-bottom: 2%;
+     font-size: 1.5rem;
+  }
+  .second-section div p{
+     font-size: 1rem;
+  }
+   .heading2{
+     position: absolute;
+     top: 0;
+     left: 35%;
+     font-size: 2rem ;
+     margin-top: 4%;
+  }
+
+  .third-section{
+     margin: 0;
+     padding: 4%;
+     display: grid;
+     grid-template-columns: 1fr 1fr ;
+     background-size: 50%, 100%;
+     background-position: -20% 80%;
+  }
+  .phones{
+     width: 30%;
+     left: 10%;
+  }
+  .content{
+     grid-column: 2/3;
+  }
+  .content h1{
+     font-size: 2rem;
+  }
+  .content p{
+     font-size: 1rem;
+   }
+
+   .fourth-section{
+      margin: 6% 0;
+      display: grid;
+      grid-template-columns: 500px 1fr;
+   }
+   .laptop{
+     width: 600px;
+     height: 500px;
+     margin-left: -170px;
+   }
+   .wrap{
+      padding: 0% 20% 4% 4%;
+   }
+   .one, .two{
+      margin: 50px 0;
+   }
+   .fourth-section h1{
+      font-size: 1.6rem;
+   }
+   .fourth-section p{
+      font-size: 1rem;
+      margin: 4% 0;
+   }
+
+   footer{
+      padding: 5% 7%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      border-top-right-radius: 90px;
+   }
+   footer div{
+      margin: 0;
+   }
+   footer ul li{
+      margin: 0%;
+   }
+   .footer a{
+      margin: 3% 0;
+   }
+}
+
+/* for tablets */
+@media only screen and (min-width: 600px)  and (max-width: 899px){
+   .heading{
+      font-size: 3rem;
+   }
+   .description{
+      font-weight: 300;
+      font-size: 1.2rem;
+   }
+
+   .second-section h1, .second-section h2{
+      margin-bottom: 5%;
+   }
+   .divs-wrap{
+      padding: 7%;
+   }
+   .first-div, .second-div{
+      margin: 10% 0%;
+   }
+   .heading2{
+      font-size: 3rem !important;
+   }
+   .editor-img{
+      width: 60%;
+   }
+
+   .third-section{
+      margin-top: 150px;
+      padding: 40% 2% 17%;
+      background-size: 70%, 100%;
+      background-position: center top ,center;
+   }
+   .phones{
+      width: 65%;
+      left: 15%;
+   }
+
+   .fourth-section{
+      margin: 15% 3%;
+   }
+   .laptop{
+      width: 70%;
+   }
+   .wrap{
+      padding: 7%;
+   }
+
+   footer{
+      padding: 12%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      border-top-right-radius: 90px;
+   }
+   footer div{
+      margin: 0;
+   }
+   footer ul li{
+      margin: 0%;
+   }
+   .footer a{
+      margin: 3% 0;
+   }
+}
+
+
+/* few fixes for top-section navbar*/
+@media only screen and (min-width: 901px) and (max-width: 1200px){
+   .navbar-links{
+      margin-right: 150px;
+      margin-top: 2%;
+   }  
+   .navbar-links a{
+      font-size: 1rem;
+   }
+  }
+  
+  /* fixing background position for top-section */
+  @media only screen and (max-width: 500px){
+     .top-section{
+        background: url(../images/bg-pattern-intro.svg), linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 80%);
+        background-size: 300%;
+        background-position: 35% 35%;
+     }
+  }
+
+  
